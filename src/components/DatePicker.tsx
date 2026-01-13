@@ -62,12 +62,12 @@ export default function DatePicker({
       const index = items.indexOf(value);
       if (index === -1) return;
 
-      const itemHeight = 48; // approx py-3 + text size
+      const itemHeight = 48; 
       const scrollPos = index * itemHeight - (container.clientHeight / 2 - itemHeight / 2) + 24;
 
       container.scrollTo({
         top: scrollPos,
-        behavior: "instant" // smooth on change can be annoying
+        behavior: "instant"
       });
     };
 
@@ -99,30 +99,30 @@ export default function DatePicker({
               className="absolute inset-0 overflow-y-auto snap-y snap-mandatory scroll-smooth no-scrollbar"
               style={{ scrollSnapType: "y mandatory" }}
             >
-              <div className="h-24" /> {/* top padding */}
-              {daysInMonth.map((day) => (
-                <div
-                  key={day}
-                  className="h-12 flex items-center justify-center snap-center"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setSelectedDay(day)}
-                    className={`text-xl font-medium transition-all duration-200 w-16 text-center
-                      ${day === selectedDay
-                        ? "text-indigo-600 font-bold scale-125"
-                        : "text-gray-500/80 hover:text-gray-700"}`}
-                  >
-                    {day}
-                  </button>
-                </div>
-              ))}
-              <div className="h-24" /> {/* bottom padding */}
+              <div className="h-24" />
+                {daysInMonth.map((day) => (
+                    <div
+                        key={day}
+                        className="h-12 flex items-center justify-center snap-center"
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setSelectedDay(day)}
+                            className={`text-xl font-medium transition-all duration-200 w-16 text-center
+                            ${day === selectedDay
+                                ? "text-black font-bold scale-125"
+                                : "text-gray-500/80 hover:text-gray-700"}`}
+                        >
+                            {day}
+                        </button>
+                    </div>
+                ))}
+              <div className="h-24" />
             </div>
 
             {/* Fade & selection highlight */}
             <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white via-transparent to-white" />
-            <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-12 border-y border-indigo-300/40 bg-indigo-50/30 rounded-lg" />
+            <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-12 " />
           </div>
 
           {/* MONTH */}
@@ -132,27 +132,27 @@ export default function DatePicker({
               className="absolute inset-0 overflow-y-auto snap-y snap-mandatory scroll-smooth no-scrollbar"
             >
               <div className="h-24" />
-              {months.map((month) => (
-                <div
-                  key={month}
-                  className="h-12 flex items-center justify-center snap-center"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setSelectedMonth(month)}
-                    className={`text-xl font-medium transition-all duration-200 w-full text-center
-                      ${month === selectedMonth
-                        ? "text-indigo-600 font-bold scale-110"
-                        : "text-gray-500/80 hover:text-gray-700"}`}
-                  >
-                    {month}
-                  </button>
-                </div>
-              ))}
+                {months.map((month) => (
+                    <div
+                        key={month}
+                        className="h-12 flex items-center justify-center snap-center"
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setSelectedMonth(month)}
+                            className={`text-xl font-medium transition-all duration-200 w-full text-center
+                            ${month === selectedMonth
+                                ? "text-black font-bold scale-110"
+                                : "text-gray-500/80 hover:text-gray-700"}`}
+                        >
+                            {month}
+                        </button>
+                    </div>
+                ))}
               <div className="h-24" />
             </div>
             <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white via-transparent to-white" />
-            <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-12 border-y border-indigo-300/40 bg-indigo-50/30 rounded-lg" />
+            <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-12 " />
           </div>
 
           {/* YEAR */}
@@ -162,27 +162,27 @@ export default function DatePicker({
               className="absolute inset-0 overflow-y-auto snap-y snap-mandatory scroll-smooth no-scrollbar"
             >
               <div className="h-24" />
-              {years.map((year) => (
-                <div
-                  key={year}
-                  className="h-12 flex items-center justify-center snap-center"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setSelectedYear(year)}
-                    className={`text-xl font-medium transition-all duration-200 w-full text-center
-                      ${year === selectedYear
-                        ? "text-indigo-600 font-bold scale-125"
-                        : "text-gray-500/80 hover:text-gray-700"}`}
-                  >
-                    {year}
-                  </button>
-                </div>
-              ))}
-              <div className="h-24" />
+                {years.map((year) => (
+                    <div
+                        key={year}
+                        className="h-12 flex items-center justify-center snap-center"
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setSelectedYear(year)}
+                            className={`text-xl font-medium transition-all duration-200 w-full text-center
+                            ${year === selectedYear
+                                ? "text-black font-bold scale-125"
+                                : "text-gray-500/80 hover:text-gray-700"}`}
+                        >
+                            {year}
+                        </button>
+                    </div>
+                ))}
+              <div className="h-28" />
             </div>
             <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white via-transparent to-white" />
-            <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-12 border-y border-indigo-300/40 bg-indigo-50/30 rounded-lg" />
+            <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-12 " />
           </div>
         </div>
 
@@ -197,16 +197,16 @@ export default function DatePicker({
         </div>
       </div>
 
-      <div className="flex border-t border-gray-200">
+      <div className="flex p-6 gap-3">
         <button
           onClick={onCancel}
-          className="flex-1 py-5 text-gray-600 font-medium hover:bg-gray-50 transition-colors"
+          className="flex-1 py-3 text-red-600 font-semibold uppercase cursor-pointer"
         >
           Cancel
         </button>
         <button
           onClick={handleConfirm}
-          className="flex-1 py-5 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
+          className="flex-1 py-3 bg-indigo-600 text-white rounded-md font-semibold uppercase cursor-pointer"
         >
           Confirm
         </button>

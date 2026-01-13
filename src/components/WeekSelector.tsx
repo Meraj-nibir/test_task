@@ -55,7 +55,7 @@ export default function WeekSelector() {
             <div className="max-w-7xl mx-auto px-5 sm:px-6 pt-12 pb-20">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-8">
-                    <button className="p-2 hover:bg-gray-100/80 rounded-full transition-colors">
+                    <button className="p-2 rounded-full transition-colors cursor-pointer">
                         <FaChevronLeft className="text-gray-600 text-xl" />
                     </button>
                     <span className="text-sm font-medium text-gray-600">
@@ -157,7 +157,7 @@ export default function WeekSelector() {
                                             "inline-flex items-center justify-center gap-3",
                                             "px-8 py-4 bg-gray-50 border border-gray-300",
                                             "rounded-xl text-gray-700 hover:bg-gray-100",
-                                            "transition w-full max-w-full text-lg font-medium"
+                                            "transition w-full max-w-full text-lg font-semiBold cursor-pointer"
                                         )}
                                     >
                                         {startDate ? format(startDate, "MMMM d, yyyy") : "Select start date"}

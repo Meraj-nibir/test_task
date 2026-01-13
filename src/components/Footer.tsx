@@ -17,13 +17,12 @@ export default function Footer({ price, days }: FooterProps) {
 
         <div className="flex gap-4">
           <Button 
-            variant="outline"
-            className="px-6 py-3 uppercase font-semibold text-[15px]"
+            className="px-6 bg-transparent hover:bg-transparent hover:border-0 text-black py-3 uppercase font-semibold text-[15px] cursor-pointer"
           >
             Back
           </Button>
           <Button 
-            className="px-6 py-3 uppercase rounded-md bg-[#852DFE] hover:bg-[#7a1ae6] text-white font-semibold text-[15px]"
+            className="px-6 py-3 uppercase rounded-md bg-[#8d3dfd] hover:bg-[#8d3dfd] hover:border-0 text-white font-semibold text-[15px] cursor-pointer"
           >
             Next
           </Button>

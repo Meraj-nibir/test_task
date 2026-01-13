@@ -22,7 +22,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-6 shrink-0">
-            <MdOutlineShoppingBag size={24}/>
+            <MdOutlineShoppingBag size={24} className="cursor-pointer"/>
             <Button 
               className="
                 flex 
