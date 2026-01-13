@@ -49,7 +49,7 @@ export default function WeekSelector() {
     <div className="min-h-[60vh] bg-linear-to-b from-[#5D06E905] to-[#1C1DF621]">
         <div
             className="
-            bg-[url('/bg.png')] bg-size-[85%_100%] bg-center bg-no-repeat
+            bg-[url('/bg.png')] bg-size-[100%_100%] bg-center bg-no-repeat
             "
         >
             <div className="max-w-7xl mx-auto px-5 sm:px-6 pt-12 pb-20">
